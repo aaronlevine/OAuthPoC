@@ -11,7 +11,6 @@ namespace OAuthPoC.Controllers
 	public class OrdersController : ApiController
 	{
 		[Authorize]
-		[Route("")]
 		public IHttpActionResult Get()
 		{
 			return Ok(Order.CreateOrders());

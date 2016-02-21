@@ -32,6 +32,9 @@ namespace AngularJSAuthentication.API
 				AccessTokenExpireTimeSpan = TimeSpan.FromDays(1),
 				Provider = new SimpleAuthorizationServerProvider()
 			};
+			// Token Generation
+			app.UseOAuthAuthorizationServer(OAuthServerOptions);
+			app.UseOAuthBearerAuthentication(new OAuthBearerAuthenticationOptions());
 
 		}
 	}
