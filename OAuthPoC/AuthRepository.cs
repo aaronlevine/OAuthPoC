@@ -1,10 +1,11 @@
-﻿using System.Threading.Tasks;
+﻿using System;
+using System.Threading.Tasks;
 using Microsoft.AspNet.Identity;
 using Microsoft.AspNet.Identity.EntityFramework;
 
 namespace OAuthPoC
 {
-	public class AuthRepository
+	public class AuthRepository : IDisposable
 	{
 		private AuthContext _authContext;
 
@@ -38,6 +39,5 @@ namespace OAuthPoC
 			_authContext.Dispose();
 			_userManager.Dispose();
 		}
-
 	}
 }
