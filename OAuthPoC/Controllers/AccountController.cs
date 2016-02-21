@@ -6,6 +6,7 @@ using System.Net.Http;
 using System.Threading.Tasks;
 using System.Web.Http;
 using Microsoft.AspNet.Identity;
+using OAuthPoC.Attributes;
 
 namespace OAuthPoC.Controllers
 {
@@ -20,6 +21,7 @@ namespace OAuthPoC.Controllers
 		}
 
 		[AllowAnonymous]
+        [RequireHttps]
 		[Route("Register")]
 		public async Task<IHttpActionResult> Register(UserModel userModel)
 		{

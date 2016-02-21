@@ -3,7 +3,6 @@ using Microsoft.Owin;
 using OAuthPoC;
 using Owin;
 
-
 [assembly: OwinStartup(typeof(AngularJSAuthentication.API.Startup))]
 // ReSharper disable once CheckNamespace
 namespace AngularJSAuthentication.API
